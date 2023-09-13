@@ -12,7 +12,8 @@ return {
         {mode = "n", "<leader>f<S-s>", ":Telescope lsp_workspace_symbols<cr>"},
         {mode = "n", "<leader>fs", ":Telescope lsp_document_symbols<cr>"},
         {mode = "n", "<leader>f<S-d>", ":Telescope diagnostics<cr>"},
-        {mode = "n", "<leader>fd", ":Telescope diagnostics bufnr=0<cr>"}
+        {mode = "n", "<leader>fd", ":Telescope diagnostics bufnr=0<cr>"},
+        {mode = "n", "<leader>ft", ":Telescope treesitter<cr>"}
     },
     opts = {}
 }
