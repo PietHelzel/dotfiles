@@ -1,6 +1,5 @@
 return {
     "romgrk/barbar.nvim",
-    name = "barbar",
     dependencies = {
         "lewis6991/gitsigns.nvim",
         "nvim-tree/nvim-web-devicons"
