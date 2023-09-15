@@ -1,0 +1,26 @@
+set shell bash
+
+# Safer shell commands: Exit on error and error on unset variable
+set shellopts "-eu"
+set ifs "\n"
+
+# Show file size and update time by default
+set info size:time
+
+# Remap deletion keys
+map d
+map dd %trash-put $fx
+map dD delete
+
+# Add commands to create files and folders
+map aa %{{
+    printf "filename: "
+    read ans
+    touch $ans
+}}
+
+map ad %{{
+    printf "folder name: "
+    read ans
+    mkdir "$ans"
+}}
