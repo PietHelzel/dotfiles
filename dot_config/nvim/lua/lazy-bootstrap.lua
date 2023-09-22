@@ -19,6 +19,7 @@ require("lazy").setup({
         defaults = {
             lazy = true,
             version = "*" -- use latest stable version of plugins
-    	}
-    }
+    	},
+    },
+    change_detection = {enabled = false, notify = false}
 })
