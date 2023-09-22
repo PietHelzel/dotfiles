@@ -23,7 +23,7 @@ return {
                 ["<C-e>"] = cmp.mapping.close(),
                 ["<CR>"] = cmp.mapping.confirm({
                     behaviour = cmp.ConfirmBehavior.Insert,
-                    select = true,
+                    select = false,
                 }),
                 -- Super-Tab behaviour
                 ["<Tab>"] = cmp.mapping(function(fallback)
