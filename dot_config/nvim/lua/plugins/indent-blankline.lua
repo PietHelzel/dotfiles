@@ -1,7 +1,11 @@
 return {
     "lukas-reineke/indent-blankline.nvim",
-    branch = "v3",
+    dependencies = {
+        "hiphish/rainbow-delimiters.nvim",
+    },
     config = function ()
-        require("ibl").setup({})
+        require("ibl").setup({
+            indent = {char = "¦"}
+        })
     end
 }

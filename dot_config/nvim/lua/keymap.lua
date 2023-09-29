@@ -1,7 +1,7 @@
 -- Options for keybindings
 -- "noremap": No recursive mapping
 -- "silent": Show no message when keybinding is used
-local opts = {noremap = true, silent = true} 
+local opts = {noremap = true, silent = true}
 
 local keymap = vim.api.nvim_set_keymap
 
