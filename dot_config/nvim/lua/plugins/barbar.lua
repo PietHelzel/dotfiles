@@ -16,6 +16,7 @@ return {
     },
     keys = {
         {mode = "n", "<leader>q", ":BufferClose<cr>"},
+        {mode = "n", "<leader><S-q>", ":BufferClose!<cr>"},
         {mode = "n", "<A-j>", ":BufferPrevious<cr>"},
         {mode = "n", "<A-k>", ":BufferNext<cr>"},
         {mode = "n", "<A-h>", ":BufferMovePrevious<cr>"},
@@ -25,6 +26,11 @@ return {
         {mode = "n", "<leader>bp", ":BufferPin<cr>"},
         {mode = "n", "<leader>bw", ":BufferCloseAllButCurrentOrPinned<cr>"},
         {mode = "n", "<leader>bj", ":BufferCloseBuffersLeft<cr>"},
-        {mode = "n", "<leader>bk", ":BufferCloseBuffersRight<cr>"}
+        {mode = "n", "<leader>bk", ":BufferCloseBuffersRight<cr>"},
+        {mode = "n", "<leader>b<S-d>", ":BufferPickDelete!<cr>"},
+        {mode = "n", "<leader>b<S-p>", ":BufferPin<cr>"},
+        {mode = "n", "<leader>b<S-w>", ":BufferCloseAllButCurrentOrPinned!<cr>"},
+        {mode = "n", "<leader>b<S-j>", ":BufferCloseBuffersLeft!<cr>"},
+        {mode = "n", "<leader>b<S-k>", ":BufferCloseBuffersRight!<cr>"},
     }
 }
