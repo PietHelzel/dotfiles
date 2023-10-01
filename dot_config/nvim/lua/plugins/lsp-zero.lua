@@ -15,7 +15,7 @@ return {
         -- ===== Setup lsp-zero =====
         local lsp_zero = require("lsp-zero")
 
-        lsp_zero.on_attach(function(client, bufnr)
+        lsp_zero.on_attach(function(_, bufnr)
             lsp_zero.default_keymaps({buffer = bufnr})
         end)
 
@@ -35,7 +35,8 @@ return {
         local cmp = require("cmp")
         local luasnip = require("luasnip")
         luasnip.setup({
-            history = false
+            delete_check_events = "TextChanged",
+            region_check_events = "CursorMoved"
         })
 
         cmp.setup({
