@@ -1,2 +1,4 @@
 alias ls='eza -l --icons -a --group-directories-first'
 alias grep='grep --color=auto'
+alias pkexec='pkexec env $(env)'
+alias md2pdf='pandoc --pdf-engine=typst'
