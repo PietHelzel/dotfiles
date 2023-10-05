@@ -41,9 +41,9 @@ return {
 
         cmp.setup({
             sources = {
-                {name = "nvim_lsp"},
-                {name = "luasnip"},
-                {name = "neorg"}
+                {name = "nvim_lsp", max_item_count = 5, priority = 1000},
+                {name = "luasnip", max_item_count = 3, priority = 750},
+                {name = "neorg", max_item_count = 3, priority = 500}
             },
             mapping = cmp.mapping.preset.insert({
                 ["<CR>"] = cmp.mapping.confirm({select = false}),
@@ -77,5 +77,10 @@ return {
                 documentation = cmp.config.window.bordered()
             }
         })
+
+        -- ===== Setup autopairs =====
+
+        local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+        cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
     end
 }
