@@ -21,5 +21,8 @@ require("lazy").setup({
             version = "*" -- use latest stable version of plugins
     	},
     },
-    change_detection = {enabled = false, notify = false}
+    change_detection = {enabled = false, notify = false},
+    ui = {
+        border = "rounded"
+    }
 })
