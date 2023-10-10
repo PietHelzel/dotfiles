@@ -20,9 +20,9 @@ keymap("n", "<A-m>", ":vertical resize +2<CR>", opts)
 keymap("n", "<A-v>", ":horizontal resize -2<CR>", opts)
 keymap("n", "<A-b>", ":horizontal resize +2<CR>", opts)
 
--- Better buffer navigation
-keymap("n", "<A-l>", ":bnext<CR>", opts)
-keymap("n", "<A-h>", ":bprevious<CR>", opts)
+-- Copy/Paste from system keyboard
+keymap("n", "<leader>y", "\"+y", opts)
+keymap("n", "<leader>p", "\"+p", opts)
 
 -- ===== Visual Mode =====
 
