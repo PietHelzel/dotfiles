@@ -4,7 +4,8 @@ return {
         {
             mode = "n", "<leader>p", function ()
                 require("nabla").popup({border = "rounded"})
-            end
+            end,
+            desc = "preview latex"
         }
     }
 }
