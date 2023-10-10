@@ -13,8 +13,6 @@ vim.opt.splitright = true -- Always split right on vertical split
 
 vim.opt.termguicolors = true -- Better colors
 
-vim.opt.timeout = false -- Disable key combo timeouts
-
 vim.wo.signcolumn = "yes" -- Prevent text jumping when diagnostics appear
 
 vim.opt.laststatus = 3 -- Global statusline
