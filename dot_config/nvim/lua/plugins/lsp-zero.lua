@@ -9,7 +9,8 @@ return {
         "hrsh7th/nvim-cmp",
         "L3MON4D3/LuaSnip",
         "rafamadriz/friendly-snippets",
-        "saadparwaiz1/cmp_luasnip"
+        "saadparwaiz1/cmp_luasnip",
+        "hrsh7th/cmp-calc"
     },
     config = function()
         -- ===== Setup lsp-zero =====
@@ -21,7 +22,11 @@ return {
 
         -- ===== Setup mason =====
 
-        require("mason").setup({})
+        require("mason").setup({
+            ui = {
+                border = "rounded"
+            }
+        })
         require("mason-lspconfig").setup({
             handlers = {lsp_zero.default_setup}
         })
@@ -43,7 +48,8 @@ return {
             sources = {
                 {name = "nvim_lsp", max_item_count = 5, priority = 1000},
                 {name = "luasnip", max_item_count = 3, priority = 750},
-                {name = "neorg", max_item_count = 3, priority = 500}
+                {name = "neorg", max_item_count = 3, priority = 500},
+                {name = "calc"}
             },
             mapping = cmp.mapping.preset.insert({
                 ["<CR>"] = cmp.mapping.confirm({select = false}),
