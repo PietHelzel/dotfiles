@@ -26,6 +26,7 @@ return {
         {mode = "n", "<leader>ll", ":Lspsaga diagnostic_jump_prev<cr>", desc = "jump to prev diagnostic"},
         {mode = "n", "<leader>lL", ":Lspsaga diagnostic_jump_next<cr>", desc = "jump to next diagnostic"},
         {mode = "n", "<leader>lm", ":Lspsaga show_buf_diagnostics<cr>", desc = "buffer diagnostics"},
-        {mode = "n", "<leader>lM", ":Lspsaga show_workspace_diagnostics<cr>", desc = "workspace diagnostics"}
+        {mode = "n", "<leader>lM", ":Lspsaga show_workspace_diagnostics<cr>", desc = "workspace diagnostics"},
+        {mode = "n", "<leader>la", ":Lspsaga code_action<cr>", desc = "code actions"}
     }
 }
