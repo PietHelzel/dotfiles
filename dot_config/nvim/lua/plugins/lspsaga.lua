@@ -18,14 +18,14 @@ return {
         }
     },
     keys = {
-        {mode = {"n", "t"}, "<C-#>", "<cmd>Lspsaga term_toggle<cr>"},
-        {mode = "n", "<leader>lo", ":Lspsaga outline<cr>"},
-        {mode = "n", "<leader>lf", ":Lspsaga finder<cr>"},
-        {mode = "n", "<leader>ld", ":Lspsaga hover_doc<cr>"},
-        {mode = "n", "<leader>lr", ":Lspsaga rename<cr>"},
-        {mode = "n", "<leader>ll", ":Lspsaga diagnostic_jump_prev<cr>"},
-        {mode = "n", "<leader>lL", ":Lspsaga diagnostic_jump_next<cr>"},
-        {mode = "n", "<leader>lm", ":Lspsaga show_buf_diagnostics<cr>"},
-        {mode = "n", "<leader>lM", ":Lspsaga show_workspace_diagnostics<cr>"}
+        {mode = {"n", "t"}, "<C-#>", "<cmd>Lspsaga term_toggle<cr>", desc = "toggle terminal"},
+        {mode = "n", "<leader>lo", ":Lspsaga outline<cr>", desc = "outline"},
+        {mode = "n", "<leader>lf", ":Lspsaga finder<cr>", desc = "find symbols"},
+        {mode = "n", "<leader>ld", ":Lspsaga hover_doc<cr>", desc = "documentation"},
+        {mode = "n", "<leader>lr", ":Lspsaga rename<cr>", desc = "rename symbol"},
+        {mode = "n", "<leader>ll", ":Lspsaga diagnostic_jump_prev<cr>", desc = "jump to prev diagnostic"},
+        {mode = "n", "<leader>lL", ":Lspsaga diagnostic_jump_next<cr>", desc = "jump to next diagnostic"},
+        {mode = "n", "<leader>lm", ":Lspsaga show_buf_diagnostics<cr>", desc = "buffer diagnostics"},
+        {mode = "n", "<leader>lM", ":Lspsaga show_workspace_diagnostics<cr>", desc = "workspace diagnostics"}
     }
 }

@@ -6,7 +6,33 @@ return {
 
         require("which-key").setup({
             window = {
-                border = "single"
+                border = "rounded"
+            }
+        })
+
+        require("which-key").register({
+            ["<leader>"] = {
+                f = {
+                    name = "Telescope"
+                },
+                n = {
+                    name = "Neorg"
+                },
+                g = {
+                    name = "Git"
+                },
+                j = {
+                    name = "Hop (extended)"
+                },
+                t = {
+                    name = "Trouble"
+                },
+                b = {
+                    name = "Buffers"
+                },
+                l = {
+                    name = "Lspsaga"
+                }
             }
         })
     end,
