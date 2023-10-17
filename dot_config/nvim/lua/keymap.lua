@@ -3,7 +3,7 @@
 -- "silent": Show no message when keybinding is used
 local opts = {noremap = true, silent = true}
 
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- ===== Normal Mode =====
 
@@ -21,8 +21,8 @@ keymap("n", "<A-v>", ":horizontal resize -2<CR>", opts)
 keymap("n", "<A-b>", ":horizontal resize +2<CR>", opts)
 
 -- Copy/Paste from system keyboard
-keymap("n", "<leader>y", "\"+y", opts)
-keymap("n", "<leader>p", "\"+p", opts)
+keymap({"n", "v"}, "<leader>y", "\"+y", opts)
+keymap({"n", "v"}, "<leader>p", "\"+p", opts)
 
 -- ===== Visual Mode =====
 
