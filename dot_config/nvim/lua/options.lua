@@ -17,4 +17,4 @@ vim.wo.signcolumn = "yes" -- Prevent text jumping when diagnostics appear
 
 vim.opt.laststatus = 3 -- Global statusline
 
-vim.g.mapleader = " "
+vim.opt.cursorline = true
