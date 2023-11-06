@@ -8,7 +8,13 @@ return {
         mru_sort = true,
         hooks = {
             open = function ()
-                require("nvim-tree.api").tree.toggle(false, true)
+                local nvtree = require("nvim-tree.api").tree
+
+                if nvtree.is_visible() then
+                    nvtree.focus()
+                else
+                    nvtree.toggle(false, true)
+                end
             end
         }
     },

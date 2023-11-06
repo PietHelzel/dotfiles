@@ -7,5 +7,7 @@ return {
         {mode = "n", "<leader>e", "<cmd>NvimTreeFocus<cr>", desc = "focus file tree"},
         {mode = "n", "<leader><S-e>", "<cmd>NvimTreeToggle<cr>", desc = "toggle file tree"}
     },
-    opts = {}
+    opts = {
+        update_cwd = true
+    }
 }
