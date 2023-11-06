@@ -29,13 +29,23 @@ return {
             }
         end
 
+        local function get_startuptime()
+            return {
+                type = "text",
+                val = "Startup Time: Loading...",
+                opts = {position = "center"}
+            }
+        end
 
         local function get_info()
             local lazy_stats = require("lazy").stats()
+
+
             local total_plugins = " " .. lazy_stats.loaded .. "/" .. lazy_stats.count .. " packages loaded"
-		local datetime = os.date(" %A %B %d")
+            local datetime = os.date(" %A %B %d")
             local version = vim.version()
-		local nvim_version_info = " " .. version.major .. "." .. version.minor .. "." .. version.patch
+            local nvim_version_info = " " .. version.major .. "." .. version.minor .. "." .. version.patch
+
             local info_string = datetime .. "  |  " .. total_plugins .. "  |  " .. nvim_version_info
 
             return {
@@ -101,6 +111,8 @@ return {
             {type = "padding", val = 4},
             get_header(),
             {type = "padding", val = 2},
+            get_startuptime(),
+            {type = "padding", val = 1},
             get_info(),
             {type = "padding", val = 2},
             get_links(),
@@ -108,5 +120,15 @@ return {
             get_workspaces()
         }
         require("alpha").setup(theme.config)
+
+        vim.api.nvim_create_autocmd("UIEnter", {
+            callback = function()
+                local stats = require("lazy").stats()
+                local ms = math.floor(stats.startuptime * 100) / 100
+                theme.config.layout[4].val = "Startup Time: " .. ms .. "ms"
+                pcall(vim.cmd.AlphaRedraw)
+            end,
+        })
+
     end
 }
