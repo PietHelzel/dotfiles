@@ -4,7 +4,7 @@ return {
         "nvim-lua/plenary.nvim"
     },
     keys = {
-        {mode = "n", "<leader>gg", ":LazyGit<cr>", desc = "open lazygit"},
-        {mode = "n", "<leader>gp", ":LazyGitCurrentFile<cr>", desc = "open lazygit on current file"}
+        {mode = "n", "<leader>gg", "<cmd>LazyGit<cr>", desc = "open lazygit"},
+        {mode = "n", "<leader>gp", "<cmd>LazyGitCurrentFile<cr>", desc = "open lazygit on current file"}
     }
 }

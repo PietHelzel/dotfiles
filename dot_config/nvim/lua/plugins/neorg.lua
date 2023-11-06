@@ -7,17 +7,23 @@ return {
     ft = {"norg"},
     cmd = "Neorg",
     keys = {
-        {mode = "n", "<leader>nt", ":Neorg toc right<cr>"}
+        {mode = "n", "<leader>nt", "<cmd>Neorg toc right<cr>"}
     },
     opts = {
         load = {
             ["core.defaults"] = {},
-            ["core.concealer"] = {},
+            ["core.concealer"] = {config = {
+                icons = {
+                    code_block = {
+                        conceal = true
+                    }
+                }
+            }},
             ["core.export"] = {config = {extensions = "all"}},
             ["core.completion"] = {config = {
                 engine = "nvim-cmp",
                 name = "neorg"
-            }}
+            }},
         }
     }
 }
