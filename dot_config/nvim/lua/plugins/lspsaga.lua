@@ -5,6 +5,7 @@ return {
         "nvim-tree/nvim-web-devicons"
     },
     event = "LspAttach",
+    enabled = false,
     cmd = "Lspsaga",
     opts = {
         ui = {
