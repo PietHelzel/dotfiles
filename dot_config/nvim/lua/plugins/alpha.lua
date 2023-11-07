@@ -93,9 +93,7 @@ return {
                     break
                 end
 
-                local path = Path:new(workspace.path):normalize("~")
-
-                local label = workspace.name .. " (" .. path .. ")"
+                local label = workspace.name
                 local command = "<cmd>WorkspacesOpen " .. workspace.name .. "<cr>"
 
                 local b = button(tostring(i), label, command)
