@@ -8,12 +8,23 @@ return {
         mru_sort = true,
         hooks = {
             open = function ()
-                local nvtree = require("nvim-tree.api").tree
+                -- local nvtree = require("nvim-tree.api").tree
+                --
+                -- if nvtree.is_visible() then
+                --     nvtree.focus()
+                -- else
+                --     nvtree.toggle(false, true)
+                -- end
 
-                if nvtree.is_visible() then
-                    nvtree.focus()
+                local neotree = require("neo-tree.command")
+
+                local manager = require("neo-tree.sources.manager")
+                local windid = manager.get_state("filesystem").winid
+
+                if windid == nil then
+                    neotree.execute({action = "show"})
                 else
-                    nvtree.toggle(false, true)
+                    neotree.execute({action = "focus"})
                 end
             end
         }
