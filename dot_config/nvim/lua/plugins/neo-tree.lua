@@ -10,6 +10,25 @@ return {
         popup_border_style = "rounded",
         window = {
             width = 32
+        },
+        default_component_configs = {
+            name = {
+                use_git_status_colors = false
+            },
+            git_status = {
+                symbols = {
+                  -- Change type
+                  added     = "✚",
+                  modified  = "",
+                  deleted   = "✖",
+                  renamed   = "󰁕",
+                  untracked = "",
+                  ignored   = "",
+                  unstaged  = "󰄱",
+                  staged    = "",
+                  conflict  = "",
+                }
+            }
         }
     },
     keys = {
