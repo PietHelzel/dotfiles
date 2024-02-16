@@ -34,4 +34,4 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- ===== Terminal Mode =====
-keymap("t", "<Esc>", "<C-\\><C-N>", opts)
+-- keymap("t", "<Esc>", "<C-\\><C-N>", opts)

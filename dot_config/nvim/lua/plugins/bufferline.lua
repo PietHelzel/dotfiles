@@ -19,12 +19,18 @@ return {
                         require('bufferline.groups').builtin.pinned:with({ icon = "󰐃" })
                     }
                 },
+                indicator = {
+                    style = "none"
+                },
+                separator_style = {
+                    '', ''
+                },
                 offsets = {{
                     filetype = "neo-tree",
                     text = " File Explorer",
                     highlight = "Directory",
-                    separator = false,
-                }},
+                    separator = true,
+                }}
             }
         })
     end,

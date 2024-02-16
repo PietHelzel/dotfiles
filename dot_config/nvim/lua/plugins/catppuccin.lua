@@ -9,7 +9,12 @@ return {
             integrations = {
                 nvimtree = true
             },
-            transparent_background = true
+            transparent_background = true,
+            -- custom_highlights = function(colors)
+            --     return {
+            --         TabLineSel = {bg = colors.red}
+            --     }
+            -- end,
         })
         vim.cmd("colorscheme catppuccin")
     end
